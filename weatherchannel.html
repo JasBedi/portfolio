@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Channel</title>
+    
+  </head>
+  <body  data-spy="scroll" data-target=".navbar" data-offset="50" >
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="weatherstyle.css">
+
+    <nav class="navbar navbar-default navigation_bar navbar-fixed-top">
+      <div class="container"> 
+        <div class="navbar-header"> 
+          
+          <!--When the window size decreases -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse" aria-expanded="false"> 
+            <span class="sr-only">Toggle navigation</span> 
+              <span class="icon-bar"></span> 
+              <span class="icon-bar"></span> 
+              <span class="icon-bar"></span> 
+          </button> 
+          <a class="navbar-brand" style="color: white" href="#">Weather Channel</a> 
+        </div> 
+        
+        <div class="collapse navbar-collapse" id="navbar_collapse">
+        <ul class="nav navbar-nav">
+          <li  class="active"><a style="color: white" href="#main">Main</a></li>
+          <li><a href="#hourly" style="color: white">Hourly</a></li>
+          <li><a href="#daily" style="color: white">Daily</a></li>
+        </ul>
+       
+       <!-- Right Elements in navigation bar -->
+          <form class="form-inline navbar-right" role="form" id="WeatherForm"> 
+            <div class="form-group"> 
+              <input class="form-control col-sm-12 enter_location" placeholder="Enter Location" id="enterLocation"> 
+            </div> 
+            <button type="submit" class="btn btn-default get_weather">Get Weather</button> 
+          </form> 
+        </div> 
+      </div>
+    </nav>
+    
+ <!--Main Page display -->  
+   <div class="container" id="main">
+     <div class="jumbotron jumbotron_customize" id="jumbo">
+     
+     </div> 
+   </div>
+
+
+   <!--Main Page Other Details -->
+   <div class="container">
+     <div class="panel panel-info">
+       <div class="panel-heading">Forecast Details</div>
+            <table id="deta" class="table ">
+              <tr><td>Pressure</td><td id="currentCityPressure">N/A</td></tr>
+              <tr><td>Humidity</td><td id="currentCityHumidity">N/A</td></tr>
+              <tr><td>Max.Temperature</td><td id="currentCityMaxTemp">N/A</td></tr>
+              <tr><td>Min.Temperature</td><td id="currentCityMinTemp">N/A</td></tr>
+            </table>
+        </div>
+    </div>
+
+ <!--Main Page Previous Search Display -->
+   <div class="container" id="mainPagePreviousSearches">
+     <div class="panel panel-info">
+       <div class="panel-heading">Previous Search<button class="btn btn-danger btn-sm navbar-right clearButton" data-toggle="modal" data-target="#confirmationModal">Clear All</button></div>
+          <div class="panel-body" id="previousSearches">
+            <table class="table" width="100%"></table>  
+           </div>
+        </div>
+      </div>
+               
+      <!--Hourly page Display -->
+  <div class="container" id="hourly">
+     <div class="panel panel-info">
+        <div class="panel-heading">Hourly</div>
+          <div class="panel-body"  id="hourlyWeather">
+            
+          </div>
+        </div>
+     </div>
+  
+
+
+<!--Daily Page Display-->
+<div class="container" id="daily">
+    <div class="panel panel-info">
+        <div class="panel-heading">Daily</div>
+          <div class="panel-body"  id="dailyWeather"></div>
+    </div>
+</div>
+      
+<!-- Confirmation Modal -->
+<div id="confirmationModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+     <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Are you sure you want to delete ?</h4>
+     </div>
+     <div class="modal-body">
+      <p>Once deleted it can't be undone.</p>
+     </div>
+     <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+     
+     </div>
+    </div>
+  </div> <!-- close of modal-dialog -->
+</div> <!-- close of modal -->
+<!-- Confirmation Modal -->
+  
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD81hwRFsmd4EAEcyAlis9s6o4xh5YnHZg"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+    <script type="text/javascript" src="weatherscript.js"></script>
+
+  </body>
+</html>

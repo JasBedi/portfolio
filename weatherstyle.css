@@ -1,0 +1,69 @@
+body
+{
+    background-color: azure;
+    
+}
+.navigation_bar
+{
+  background-color: blueviolet;
+}
+.enter_location
+{
+  margin-top:8px;
+}
+.clearButton
+{
+  margin-top: -4px;
+  margin-right: 4px; 
+}
+.get_weather
+{
+  margin-left: 5px;
+  margin-top: 8px;
+}
+.jumbotron_customize
+{
+  background-color: lightblue;
+}
+#main
+{
+  padding-top: 70px;
+}
+/*#hourlyTable
+{
+  column-count:4;
+  -moz-column-count:4;
+  -webkit-column-count:4;
+}*/
+.main_section,.daily_heading
+{
+  height: 100%;
+}
+/*#mainPagePreviousSearches
+{
+  height: 700px;
+ padding-top: 70px; 
+}*/
+#hourly
+{
+  padding-top: 70px;
+}
+#daily 
+{  
+  padding-top: 70px;
+}
+/*#hourly
+{
+  padding-top: 230px;
+}
+#daily 
+{  
+  padding-top: 560px;
+}*/
+#previousSearches
+{
+ -webkit-columns:60px 5;
+   -moz-columns: 60px 5;
+        columns: 60px 5;  
+        columns: <column-width> || <column-count>;
+}
